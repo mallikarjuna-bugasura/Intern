@@ -60,8 +60,6 @@ LEFT OUTER JOIN tUser u1 ON f.user_id = u1.user_id
 LEFT OUTER JOIN tUser u2 ON f.friend_id = u2.user_id
 WHERE u1.name = 'malli' AND u2.name = 'hari';
 
--- Query to post something on his wall
+-- Query to post something on his wall using the given user id
 INSERT INTO tWall (user_id, post)
-SELECT user_id, 'this is my post'
-FROM tUser
-WHERE name = 'malli';
+VALUES (123, 'this is my post');
